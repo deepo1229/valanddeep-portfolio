@@ -135,13 +135,14 @@ nav {
 
 .hero-image img {
     width: 100%;
+    height: auto;
     border-radius: 20px;
     box-shadow: 0 0 30px var(--accent-glow);
     border: 2px solid var(--glass-border);
     transition: transform 0.3s ease, border-color 0.3s ease;
-    object-fit: cover;
+    object-fit: contain;
+    display: block;
 }
-
 .hero-image img:hover {
     transform: translateY(-10px);
     border-color: var(--accent-color);
@@ -409,10 +410,11 @@ input:focus, textarea:focus {
         text-align: center;
         margin-top: 50px;
     }
-    .hero-image {
-        max-width: 300px;
-        margin-bottom: 30px;
-    }
+  .hero-image {
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto 20px;
+}
     .hero-content {
         display: flex;
         flex-direction: column;
