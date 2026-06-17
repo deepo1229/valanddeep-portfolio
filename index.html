@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valand Deep | Portfolio</title>
+    <!-- Modern Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+
+
+    <!-- 3D Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <main class="content">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">VALAND DEEP</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Hi, I'm Valand Deep">Hi, I'm Valand Deep</h1>
+                <p style="margin-bottom: 20px;">B.E. Information Technology Student</p>
+                <p style="font-size: 1.1rem; max-width: 600px; margin-bottom: 40px;">Aspiring Software Developer & Web
+                    Enthusiast passionate about technology, problem-solving, and continuous learning. Building strong
+                    foundations in programming, web development, and core computer science concepts.</p>
+                <a href="#contact" class="cta-btn">Let's Talk</a>
+            </div>
+            <div class="hero-image">
+                <img src="Me.jpeg" alt="Valand Deep">
+                <div class="insta-links">
+                    <a href="https://www.instagram.com/valand_deep.12?igsh=Ynl3ZzVkeXh5am9r" target="_blank" class="insta-link"><i class="fa-brands fa-instagram"></i> Professional Instagram</a>
+                    <a href="https://www.instagram.com/_valand_deep_2406?igsh=MTJ5bGFlYXE3dmQ0aA==" target="_blank" class="insta-link"><i class="fa-brands fa-instagram"></i> Personal Instagram</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about hidden">
+            <div class="glass-panel">
+                <h2>About Me</h2>
+                <p>I am a passionate Information Technology student pursuing a Bachelor of Engineering under GTU. I am
+                    interested in software development, web technologies, and problem-solving. I continuously improve my
+                    technical skills and explore new technologies.</p>
+                <br>
+                <p>I have knowledge of Java, C, HTML, CSS, JavaScript, Data Structures, DBMS, Operating Systems,
+                    Computer Networks, and Computer Organization & Architecture.</p>
+                <br>
+                <p>I enjoy learning through hands-on experience, creating practical solutions, and developing projects
+                    that strengthen my technical foundation.</p>
+
+                <h3 class="skills-title">Skills</h3>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4>Programming Languages</h4>
+                        <div class="skills">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">C</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Web Technologies</h4>
+                        <div class="skills">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Core Subjects</h4>
+                        <div class="skills">
+                            <span class="skill-tag">Data Structures</span>
+                            <span class="skill-tag">DBMS</span>
+                            <span class="skill-tag">Operating Systems</span>
+                            <span class="skill-tag">Computer Networks</span>
+                            <span class="skill-tag">COA</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Additional Skills</h4>
+                        <div class="skills">
+                            <span class="skill-tag">Video Editing</span>
+                            <span class="skill-tag">Technical Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Career Section -->
+        <section id="education" class="hidden">
+            <div class="glass-panel">
+                <h2>Career Objective</h2>
+                <p style="margin-bottom: 40px; font-size: 1.1rem;">To build a strong career in the IT industry by
+                    continuously improving my technical skills, gaining practical experience, and contributing to
+                    meaningful software projects.</p>
+
+                <h2>Education</h2>
+                <div style="margin-bottom: 40px;">
+                    <h3 style="color: var(--accent-color); font-size: 1.5rem;">Bachelor of Engineering (Information
+                        Technology)</h3>
+                    <p style="font-weight: 600; font-size: 1.1rem; margin-top: 10px;">Gujarat Technological University
+                        (GTU)</p>
+                    <p style="color: #aaa; margin-top: 5px;">Status: Currently Pursuing</p>
+                </div>
+
+                <h2>Currently Learning</h2>
+                <ul
+                    style="list-style-position: inside; color: #ccc; line-height: 2; margin-top: 20px; font-size: 1.1rem;">
+                    <li>Strengthening Java Programming Skills</li>
+                    <li>Exploring Advanced Web Development</li>
+                    <li>Practicing Data Structures and Problem Solving</li>
+                    <li>Learning Database Design and Management</li>
+                    <li>Studying Computer Networks and Operating Systems</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects hidden">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="card-content">
+                        <h3>Personal 3D Portfolio Website</h3>
+                        <div style="font-size: 0.85rem; color: #ccc; margin-bottom: 15px;">
+                            <strong>Features:</strong> Responsive Design, Interactive 3D Effects, Smooth Animations,
+                            Modern UI<br>
+                            <strong>Tech:</strong> HTML, CSS, JavaScript
+                        </div>
+                        <a href="#" class="project-link" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-content">
+                        <h3>Smart File Organizer (Python)</h3>
+                        <p>A beginner-friendly automation script that organizes files into category-specific folders.</p>
+                        <a href="https://github.com/deepo1229/Smart-File-Organizer" class="project-link" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <!-- <div class="project-card">
+                    <div class="card-content">
+                        <h3>Flutter App UI</h3>
+                        <p>A mobile application user interface concept exploring Flutter.</p>
+                        <a href="#" class="project-link" target="_blank">View Project</a>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact hidden">
+            <div class="glass-panel form-container">
+                <h2>Get in Touch</h2>
+                <div style="margin-bottom: 30px; text-align: center; color: #ccc; font-size: 1.1rem; line-height: 1.8;">
+                    <p>Email: <a href="mailto:valanddeep46@gmail.com"
+                            style="color: var(--accent-color); text-decoration: none;">valanddeep46@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+917202841385" style="color: var(--accent-color); text-decoration: none;">+91
+                            72028 41385</a></p>
+                </div>
+                <form id="contact-form">
+                    <input type="hidden" name="access_key" id="access_key" value="7b6451e1-526f-44e6-83f1-e6838f727ff6">
+                    <input type="hidden" name="subject" value="New Contact from Portfolio">
+
+                    <div class="input-group">
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submit-btn">Send Message</button>
+                    <div id="form-status" style="margin-top: 20px; text-align: center; font-weight: 600;"></div>
+                </form>
+                <div class="social-links" style="margin-top: 30px; text-align: center;">
+                    <a href="https://www.linkedin.com/in/valand-deep-01b44a396" target="_blank"
+                        style="color: var(--accent-color); text-decoration: none; margin: 0 10px; font-weight: 600;">LinkedIn</a>
+                    <a href="https://github.com/deepo1229" target="_blank"
+                        style="color: var(--accent-color); text-decoration: none; margin: 0 10px; font-weight: 600;">GitHub</a>
+                </div>
+                <div style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: #888;">
+                    &copy; 2026 Valand Deep. All Rights Reserved.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Three.js Library from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
