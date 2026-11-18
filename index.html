@@ -4,202 +4,711 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valand Deep | Portfolio</title>
+    <title>Valand Deep | IT Engineer, Developer & Co-Founder</title>
+    <meta name="description"
+        content="Personal portfolio of Valand Deep - IT Engineering Student, Developer, Tech Enthusiast, and Co-Founder of Lampitex Digital Solutions.">
+
     <!-- Modern Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Custom Cursor -->
-
-
     <!-- 3D Canvas Background -->
-    <canvas id="bg-canvas"></canvas>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
-    <main class="content">
-        <!-- Navigation -->
-        <nav>
-            <div class="logo">VALAND DEEP</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <!-- Custom Subtle Cursor Glow (Desktop only) -->
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+    <!-- Main Navigation Header -->
+    <header class="site-header" id="site-header">
+        <nav class="nav-container" aria-label="Main Navigation">
+            <a href="#home" class="logo" aria-label="Valand Deep Home">
+                <span class="logo-accent">&lt;</span>VALAND DEEP<span class="logo-accent">/&gt;</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <ul class="nav-links" id="desktop-nav">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#achievements" class="nav-link">Milestones</a></li>
+                <li><a href="#contact" class="nav-link nav-cta-link">Contact</a></li>
             </ul>
+
+            <!-- Mobile Hamburger Toggle Button -->
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="mobile-nav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </nav>
+    </header>
 
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1 class="glitch" data-text="Hi, I'm Valand Deep">Hi, I'm Valand Deep</h1>
-                <p style="margin-bottom: 20px;">B.E. Information Technology Student</p>
-                <p style="font-size: 1.1rem; max-width: 600px; margin-bottom: 40px;">Aspiring Software Developer & Web
-                    Enthusiast passionate about technology, problem-solving, and continuous learning. Building strong
-                    foundations in programming, web development, and core computer science concepts.</p>
-                <a href="#contact" class="cta-btn">Let's Connect with me</a>
+    <!-- Mobile Navigation Drawer Overlay -->
+    <aside class="mobile-nav-overlay" id="mobile-nav" aria-label="Mobile Navigation" aria-hidden="true">
+        <div class="mobile-nav-container">
+            <ul class="mobile-nav-links">
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="#about" class="mobile-nav-link">About Me</a></li>
+                <li><a href="#skills" class="mobile-nav-link">Technical Skills</a></li>
+                <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+                <li><a href="#experience" class="mobile-nav-link">Experience & Leadership</a></li>
+                <li><a href="#education" class="mobile-nav-link">Education</a></li>
+                <li><a href="#achievements" class="mobile-nav-link">Milestones & Achievements</a></li>
+                <li><a href="#contact" class="mobile-nav-link mobile-cta">Get In Touch</a></li>
+            </ul>
+
+            <div class="mobile-socials">
+                <a href="https://www.linkedin.com/in/valand-deep-01b44a396" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/deepo1229" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/_valand_deep_2406?igsh=MTJ5bGFlYXE3dmQ0aA==" target="_blank"
+                    rel="noopener noreferrer" aria-label="Professional Instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:valanddeep46@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
             </div>
-            <div class="hero-image">
-                <img src="Me.jpeg" alt="Valand Deep">
-                <div class="insta-links">
-                    <a href="https://www.instagram.com/valand_deep.12?igsh=Ynl3ZzVkeXh5am9r" target="_blank" class="insta-link"><i class="fa-brands fa-instagram"></i> Professional Instagram</a>
-                    <a href="https://www.instagram.com/_valand_deep_2406?igsh=MTJ5bGFlYXE3dmQ0aA==" target="_blank" class="insta-link"><i class="fa-brands fa-instagram"></i> Personal Instagram</a>
+        </div>
+    </aside>
+
+    <main class="content-wrapper">
+        <!-- 1. Hero Section (Introduction) -->
+        <section id="home" class="hero-section">
+            <div class="section-inner hero-container">
+                <div class="hero-content">
+
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight-text">Valand Deep</span>
+                    </h1>
+
+                    <div class="hero-roles">
+                        <span class="role-badge"><i class="fa-solid fa-graduation-cap"></i> IT Engineering
+                            Student</span>
+                        <span class="role-badge"><i class="fa-solid fa-code"></i> Developer & Tech Builder</span>
+                        <span class="role-badge"><i class="fa-solid fa-rocket"></i> Co-Founder, Lampitex Digital
+                            Solutions</span>
+                    </div>
+
+                    <p class="hero-description">
+                        Passionate software developer and web enthusiast dedicated to technology, practical
+                        problem-solving, and continuous learning. Crafting robust software foundations in programming,
+                        modern web technologies, and core computer science concepts.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary"><i class="fa-regular fa-paper-plane"></i> Let's
+                            Connect</a>
+                        <a href="#projects" class="btn btn-outline"><i class="fa-solid fa-laptop-code"></i> View
+                            Projects</a>
+                    </div>
+
+                    <div class="hero-social-bar">
+                        <span class="social-bar-label">Find me on:</span>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/valand-deep-01b44a396" target="_blank"
+                                rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/deepo1229" target="_blank" rel="noopener noreferrer"
+                                class="social-icon" aria-label="GitHub Profile">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/_valand_deep_2406?igsh=MTJ5bGFlYXE3dmQ0aA=="
+                                target="_blank" rel="noopener noreferrer" class="social-icon"
+                                aria-label="Professional Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame-wrap">
+                        <div class="image-frame">
+                            <img src="Me.jpeg" alt="Valand Deep" width="400" height="480" class="profile-img">
+                            <div class="image-glow-ring"></div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+        <!-- 2. About Me Section -->
+        <section id="about" class="section-pad scroll-reveal">
+            <div class="section-inner">
+                <div class="section-header">
+
+                    <h2 class="section-title">About Me</h2>
+                </div>
+
+                <div class="glass-panel about-panel">
+                    <div class="about-grid">
+                        <div class="about-bio">
+                            <p class="lead-text">
+                                I am an enthusiastic <strong>Information Technology engineering student</strong>
+                                pursuing my Bachelor of Engineering under <strong>Gujarat Technological University
+                                    (GTU)</strong>.
+                            </p>
+                            <p>
+                                With an appetite for software development, modern web architecture, and algorithmic
+                                problem-solving, I focus on building reliable software with clean and maintainable
+                                logic. I continuously expand my technical repertoire through practical implementation
+                                and hands-on projects.
+                            </p>
+                            <p>
+                                Beyond individual development, I co-founded <strong>Lampitex Digital Solutions</strong>
+                                alongside fellow engineers to build accessible, tailored technology solutions. This
+                                journey has nurtured both my technical engineering prowess and my perspective on
+                                full-lifecycle software delivery.
+                            </p>
+                            <div class="about-highlights">
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-check highlight-icon"></i>
+                                    <span>Strong analytical mindset & technical problem solving</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-check highlight-icon"></i>
+                                    <span>Hands-on experience from code to deployment</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-check highlight-icon"></i>
+                                    <span>Continuous learner embracing modern tech stacks</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-stats-box">
+                            <div class="info-card">
+                                <span class="info-label">Degree</span>
+                                <span class="info-value">B.E. Information Technology</span>
+                            </div>
+                            <div class="info-card">
+                                <span class="info-label">University</span>
+                                <span class="info-value">Gujarat Technological University</span>
+                            </div>
+                            <div class="info-card">
+                                <span class="info-label">Current Status</span>
+                                <span class="info-value accent-text">Currently Pursuing</span>
+                            </div>
+                            <div class="info-card">
+                                <span class="info-label">Leadership</span>
+                                <span class="info-value">Co-Founder - Lampitex Digital Solutions</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about hidden">
-            <div class="glass-panel">
-                <h2>About Me</h2>
-                <p>I am a passionate Information Technology student pursuing a Bachelor of Engineering under GTU. I am
-                    interested in software development, web technologies, and problem-solving. I continuously improve my
-                    technical skills and explore new technologies.</p>
-                <br>
-                <p>I have knowledge of Java, C, HTML, CSS, JavaScript, Data Structures, DBMS, Operating Systems,
-                    Computer Networks, and Computer Organization & Architecture.</p>
-                <br>
-                <p>I enjoy learning through hands-on experience, creating practical solutions, and developing projects
-                    that strengthen my technical foundation.</p>
+        <!-- 3. Technical Skills Section -->
+        <section id="skills" class="section-pad scroll-reveal">
+            <div class="section-inner">
+                <div class="section-header">
 
-                <h3 class="skills-title">Skills</h3>
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h4>Programming Languages</h4>
-                        <div class="skills">
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">C</span>
-                            <span class="skill-tag">Python</span>
-                            
+                    <h2 class="section-title">Technical Skills</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Programming Languages -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="category-icon-box">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3>Programming Languages</h3>
+                        <p class="category-desc">Foundational and object-oriented programming for logical problem
+                            solving.</p>
+                        <div class="skill-pill-list">
+                            <span class="skill-pill"><i class="fa-brands fa-java"></i> Java</span>
+                            <span class="skill-pill"><i class="fa-solid fa-terminal"></i> C Language</span>
+                            <span class="skill-pill"><i class="fa-brands fa-python"></i> Python</span>
+                            <span class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript</span>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h4>Web Technologies</h4>
-                        <div class="skills">
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">JavaScript</span>
+
+                    <!-- Web Technologies -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="category-icon-box">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <h3>Web Technologies</h3>
+                        <p class="category-desc">Building responsive, accessible, and interactive user interfaces.</p>
+                        <div class="skill-pill-list">
+                            <span class="skill-pill"><i class="fa-brands fa-html5"></i> HTML5</span>
+                            <span class="skill-pill"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                            <span class="skill-pill"><i class="fa-brands fa-js"></i> Modern JavaScript (ES6+)</span>
+                            <span class="skill-pill"><i class="fa-solid fa-mobile-screen"></i> Responsive UI</span>
+                            <span class="skill-pill"><i class="fa-solid fa-cube"></i> Three.js / WebGL</span>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h4>Core Subjects</h4>
-                        <div class="skills">
-                            <span class="skill-tag">Data Structures</span>
-                            <span class="skill-tag">DBMS</span>
-                            <span class="skill-tag">Operating Systems</span>
-                            <span class="skill-tag">Computer Networks</span>
-                            <span class="skill-tag">COA</span>
+
+                    <!-- Core Computer Science -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="category-icon-box">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3>Core Computer Science</h3>
+                        <p class="category-desc">Fundamental engineering subjects shaping architectural thinking.</p>
+                        <div class="skill-pill-list">
+                            <span class="skill-pill"><i class="fa-solid fa-diagram-project"></i> Data Structures</span>
+                            <span class="skill-pill"><i class="fa-solid fa-database"></i> DBMS</span>
+                            <span class="skill-pill"><i class="fa-solid fa-microchip"></i> Operating Systems</span>
+                            <span class="skill-pill"><i class="fa-solid fa-network-wired"></i> Computer Networks</span>
+                            <span class="skill-pill"><i class="fa-solid fa-server"></i> COA</span>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h4>Additional Skills</h4>
-                        <div class="skills">
-                            <span class="skill-tag">Video Editing</span>
-                            <span class="skill-tag">Technical Problem Solving</span>
+
+                    <!-- Practical & Additional Skills -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="category-icon-box">
+                            <i class="fa-solid fa-toolbox"></i>
+                        </div>
+                        <h3>Tools & Additional Skills</h3>
+                        <p class="category-desc">Everyday development utilities, automation, and creative problem
+                            solving.</p>
+                        <div class="skill-pill-list">
+                            <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+                            <span class="skill-pill"><i class="fa-solid fa-gears"></i> Automation Scripting</span>
+                            <span class="skill-pill"><i class="fa-solid fa-lightbulb"></i> Problem Solving</span>
+                            <span class="skill-pill"><i class="fa-solid fa-video"></i> Video Editing</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Education & Career Section -->
-        <section id="education" class="hidden">
-            <div class="glass-panel">
-                <h2>Career Objective</h2>
-                <p style="margin-bottom: 40px; font-size: 1.1rem;">To build a strong career in the IT industry by
-                    continuously improving my technical skills, gaining practical experience, and contributing to
-                    meaningful software projects.</p>
+        <!-- 4. Projects Section -->
+        <section id="projects" class="section-pad scroll-reveal">
+            <div class="section-inner">
+                <div class="section-header">
 
-                <h2>Education</h2>
-                <div style="margin-bottom: 40px;">
-                    <h3 style="color: var(--accent-color); font-size: 1.5rem;">Bachelor of Engineering (Information
-                        Technology)</h3>
-                    <p style="font-weight: 600; font-size: 1.1rem; margin-top: 10px;">Gujarat Technological University
-                        (GTU)</p>
-                    <p style="color: #aaa; margin-top: 5px;">Status: Currently Pursuing</p>
+                    <h2 class="section-title">Featured Projects</h2>
                 </div>
 
-                <h2>Currently Learning</h2>
-                <ul
-                    style="list-style-position: inside; color: #ccc; line-height: 2; margin-top: 20px; font-size: 1.1rem;">
-                    <li>Strengthening Java Programming Skills</li>
-                    <li>Exploring Advanced Web Development</li>
-                    <li>Practicing Data Structures and Problem Solving</li>
-                    <li>Learning Database Design and Management</li>
-                    <li>Studying Computer Networks and Operating Systems</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects hidden">
-            <h2>Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="card-content">
-                        <h3>Personal 3D Portfolio Website</h3>
-                        <div style="font-size: 0.85rem; color: #ccc; margin-bottom: 15px;">
-                            <strong>Features:</strong> Responsive Design, Interactive 3D Effects, Smooth Animations,
-                            Modern UI<br>
-                            <strong>Tech:</strong> HTML, CSS, JavaScript
+                <div class="projects-grid">
+                    <!-- Project 1: Personal 3D Portfolio -->
+                    <article class="project-card glass-panel tilt" data-tilt>
+                        <div class="project-header">
+                            <div class="project-type-badge"><i class="fa-solid fa-cube"></i> Web / Frontend</div>
+                            <div class="project-links-top">
+                                <a href="#home" class="icon-btn" aria-label="Live Demo"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
                         </div>
-                        <a href="#" class="project-link" target="_blank">View Project</a>
-                    </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Personal 3D Interactive Portfolio</h3>
+                            <p class="project-desc">
+                                A personal portfolio engineered with Three.js and custom WebGL shaders, featuring
+                                real-time mouse parallax, glassmorphism UI, interactive card tilt, and asynchronous
+                                Web3Forms integration.
+                            </p>
+                            <div class="project-features">
+                                <span><i class="fa-solid fa-check"></i> Responsive on all devices</span>
+                                <span><i class="fa-solid fa-check"></i> Real-time 3D rendering</span>
+                                <span><i class="fa-solid fa-check"></i> Zero horizontal scroll</span>
+                            </div>
+                            <div class="project-tech-tags">
+                                <span>HTML5</span>
+                                <span>Vanilla CSS</span>
+                                <span>JavaScript (ES6+)</span>
+                                <span>Three.js</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="#home" class="btn btn-sm btn-outline">Viewing Live</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Smart File Organizer -->
+                    <article class="project-card glass-panel tilt" data-tilt>
+                        <div class="project-header">
+                            <div class="project-type-badge"><i class="fa-brands fa-python"></i> Python Automation</div>
+                            <div class="project-links-top">
+                                <a href="https://github.com/deepo1229/Smart-File-Organizer" target="_blank"
+                                    rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository"><i
+                                        class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Smart File Organizer</h3>
+                            <p class="project-desc">
+                                An automated Python utility script designed to clean messy directories by intelligently
+                                classifying, filtering, and moving files into dedicated category folders based on file
+                                extensions.
+                            </p>
+                            <div class="project-features">
+                                <span><i class="fa-solid fa-check"></i> Automated file classification</span>
+                                <span><i class="fa-solid fa-check"></i> Clean folder structuring</span>
+                                <span><i class="fa-solid fa-check"></i> Safe error-handled operations</span>
+                            </div>
+                            <div class="project-tech-tags">
+                                <span>Python</span>
+                                <span>OS & File System</span>
+                                <span>Automation</span>
+                                <span>CLI</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/deepo1229/Smart-File-Organizer" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <i class="fa-brands fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </article>
                 </div>
-                <div class="project-card">
-                    <div class="card-content">
-                        <h3>Smart File Organizer (Python)</h3>
-                        <p>A beginner-friendly automation script that organizes files into category-specific folders.</p>
-                        <a href="https://github.com/deepo1229/Smart-File-Organizer" class="project-link" target="_blank">View Project</a>
-                    </div>
-                </div>
-                <!-- <div class="project-card">
-                    <div class="card-content">
-                        <h3>Flutter App UI</h3>
-                        <p>A mobile application user interface concept exploring Flutter.</p>
-                        <a href="#" class="project-link" target="_blank">View Project</a>
-                    </div>
-                </div> -->
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact hidden">
-            <div class="glass-panel form-container">
-                <h2>Get in Touch</h2>
-                <form id="contact-form">
-                    <input type="hidden" name="access_key" id="access_key" value="7b6451e1-526f-44e6-83f1-e6838f727ff6">
-                    <input type="hidden" name="subject" value="New Contact from Portfolio">
+        <!-- 5. Experience / Leadership (Lampitex Digital Solutions) -->
+        <section id="experience" class="section-pad scroll-reveal">
+            <div class="section-inner">
+                <div class="section-header">
 
-                    <div class="input-group">
-                        <input type="text" id="name" name="name" required placeholder="Your Name">
-                    </div>
-                    <div class="input-group">
-                        <input type="email" id="email" name="email" required placeholder="Your Email">
-                    </div>
-                    <div class="input-group">
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn" id="submit-btn">Send Message</button>
-                    <div id="form-status" style="margin-top: 20px; text-align: center; font-weight: 600;"></div>
-                </form>
-                <div class="social-links" style="margin-top: 30px; text-align: center;">
-                    <a href="https://www.linkedin.com/in/valand-deep-01b44a396" target="_blank"
-                        style="color: var(--accent-color); text-decoration: none; margin: 0 10px; font-weight: 600;">LinkedIn</a>
-                    <a href="https://github.com/deepo1229" target="_blank"
-                        style="color: var(--accent-color); text-decoration: none; margin: 0 10px; font-weight: 600;">GitHub</a>
+                    <h2 class="section-title">Experience & Leadership</h2>
                 </div>
-                <div style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: #888;">
-                    &copy; 2026 Valand Deep. All Rights Reserved.
+
+                <div class="glass-panel experience-card">
+                    <div class="experience-header">
+                        <div class="exp-title-area">
+                            <span class="exp-badge">Founding Team</span>
+                            <h3 class="exp-role">Co-Founder</h3>
+                            <h4 class="exp-company">Lampitex Digital Solutions</h4>
+                            <span class="exp-location"><i class="fa-solid fa-location-dot"></i> Gujarat, India</span>
+                        </div>
+                        <div class="exp-external-ref">
+                            <a href="https://lampitex-digital-solutions.vercel.app/" target="_blank"
+                                rel="noopener noreferrer" class="company-ref-pill"
+                                title="Visit Lampitex Digital Solutions">
+                                <span>lampitex-digital-solutions.vercel.app</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="experience-content">
+                        <p class="exp-intro">
+                            As a Co-Founder at Lampitex Digital Solutions, I help lead technical initiatives for a
+                            Gujarat-rooted technology agency founded on delivering sustainable, high-caliber digital and
+                            hardware solutions for Indian businesses.
+                        </p>
+
+                        <div class="exp-key-responsibilities">
+                            <div class="responsibility-item">
+                                <div class="resp-icon"><i class="fa-solid fa-code-commit"></i></div>
+                                <div>
+                                    <h5>Full Engagement Technical Involvement</h5>
+                                    <p>Member of the core 3-person team personally involved from initial scoping and
+                                        architecture discussions through to hands-on development and final delivery.</p>
+                                </div>
+                            </div>
+
+                            <div class="responsibility-item">
+                                <div class="resp-icon"><i class="fa-solid fa-microchip"></i></div>
+                                <div>
+                                    <h5>Software & Hardware/IoT Engineering</h5>
+                                    <p>Translating collegiate engineering exploration into practical systems—bridging
+                                        web/mobile software development with custom hardware and IoT deployments.</p>
+                                </div>
+                            </div>
+
+                            <div class="responsibility-item">
+                                <div class="resp-icon"><i class="fa-solid fa-handshake"></i></div>
+                                <div>
+                                    <h5>Tailored Solutions Focus</h5>
+                                    <p>Committed to purpose-built, client-specific solutions rather than rigid
+                                        templates, championing accessible digital transformation across India.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Education Section -->
+        <section id="education" class="section-pad scroll-reveal">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2 class="section-title">Education</h2>
+                </div>
+
+                <div class="education-grid">
+                    <!-- Main Degree -->
+                    <div class="glass-panel edu-card">
+                        <div class="edu-top">
+                            <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div>
+                                <span class="edu-status-pill">Currently Pursuing</span>
+                                <h3 class="edu-degree">Bachelor of Engineering in Information Technology</h3>
+                                <h4 class="edu-inst">Gujarat Technological University (GTU)</h4>
+                            </div>
+                        </div>
+
+                        <div class="edu-body">
+                            <p class="edu-desc">
+                                Enrolled in the comprehensive Information Technology engineering curriculum under GTU,
+                                developing a rigorous understanding of computer science fundamentals, algorithmic
+                                problem solving, software engineering methodologies, and systems architecture.
+                            </p>
+
+                            <h5 class="edu-subhead">Key Focus Areas & Academic Coursework:</h5>
+                            <ul class="edu-coursework-list">
+                                <li><i class="fa-solid fa-check"></i> Data Structures and Algorithms</li>
+                                <li><i class="fa-solid fa-check"></i> Database Management Systems (DBMS)</li>
+                                <li><i class="fa-solid fa-check"></i> Operating Systems & System Programming</li>
+                                <li><i class="fa-solid fa-check"></i> Computer Networks and Communication Protocols</li>
+                                <li><i class="fa-solid fa-check"></i> Computer Organization & Architecture (COA)</li>
+                                <li><i class="fa-solid fa-check"></i> Object-Oriented Programming (Java & C)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Career Objective & Learning Path -->
+                    <div class="glass-panel edu-card">
+                        <div class="edu-top">
+                            <div class="edu-icon"><i class="fa-solid fa-compass"></i></div>
+                            <div>
+                                <span class="edu-status-pill">Continuous Growth</span>
+                                <h3 class="edu-degree">Career Objective & Active Learning</h3>
+                                <h4 class="edu-inst">Self-Directed Development</h4>
+                            </div>
+                        </div>
+
+                        <div class="edu-body">
+                            <p class="edu-desc">
+                                To build an impactful career in the IT industry by continually elevating technical
+                                skills, contributing to meaningful software products, and gaining practical end-to-end
+                                engineering experience.
+                            </p>
+
+                            <h5 class="edu-subhead">Current Learning Roadmap:</h5>
+                            <ul class="edu-coursework-list">
+                                <li><i class="fa-solid fa-angles-right"></i> Advanced Java programming and software
+                                    design patterns</li>
+                                <li><i class="fa-solid fa-angles-right"></i> Modern full-stack web architectures & APIs
+                                </li>
+                                <li><i class="fa-solid fa-angles-right"></i> Algorithmic problem-solving and
+                                    optimization</li>
+                                <li><i class="fa-solid fa-angles-right"></i> Database optimization and relational
+                                    modeling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Achievements & Milestones Section -->
+        <section id="achievements" class="section-pad scroll-reveal">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2 class="section-title">Milestones & Achievements</h2>
+                </div>
+
+                <div class="achievements-grid">
+                    <div class="milestone-card glass-panel">
+                        <div class="milestone-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <div class="milestone-content">
+                            <span class="milestone-tag">Entrepreneurship & Engineering</span>
+                            <h3 class="milestone-title">Co-Founded Lampitex Digital Solutions</h3>
+                            <p class="milestone-desc">
+                                Successfully co-founded and launched a technology solutions agency in Gujarat,
+                                translating engineering projects into commercial digital and hardware/IoT solutions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="milestone-card glass-panel">
+                        <div class="milestone-icon"><i class="fa-solid fa-award"></i></div>
+                        <div class="milestone-content">
+                            <span class="milestone-tag">Academic Progression</span>
+                            <h3 class="milestone-title">GTU B.E. Information Technology</h3>
+                            <p class="milestone-desc">
+                                Consistent progress through rigorous degree coursework, mastering core disciplines
+                                including Data Structures, OS, DBMS, Networks, and Programming.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="milestone-card glass-panel">
+                        <div class="milestone-icon"><i class="fa-brands fa-github"></i></div>
+                        <div class="milestone-content">
+                            <span class="milestone-tag">Open Source & Utility</span>
+                            <h3 class="milestone-title">Smart File Organizer Automation</h3>
+                            <p class="milestone-desc">
+                                Designed, developed, and published an open-source Python automation tool for structured
+                                filesystem workflows and automated file organization.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="milestone-card glass-panel">
+                        <div class="milestone-icon"><i class="fa-solid fa-cubes"></i></div>
+                        <div class="milestone-content">
+                            <span class="milestone-tag">Web Development</span>
+                            <h3 class="milestone-title">Interactive 3D Web Experience</h3>
+                            <p class="milestone-desc">
+                                Engineered a complete personal WebGL-powered interactive 3D showcase using Three.js and
+                                modern responsive web standards.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Contact & Social Links Section -->
+        <section id="contact" class="section-pad scroll-reveal">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Info Panel -->
+                    <div class="contact-info-panel glass-panel">
+                        <h3>Let's build something meaningful together.</h3>
+                        <p class="contact-intro">
+                            Whether you're interested in discussing software development, tech opportunities,
+                            collaborating on projects, or learning more about my work at Lampitex, my inbox is always
+                            open.
+                        </p>
+
+                        <div class="contact-detail-items">
+                            <a href="mailto:valanddeep46@gmail.com" class="contact-item">
+                                <div class="item-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="item-info">
+                                    <span class="item-label">Email</span>
+                                    <span class="item-value">valanddeep46@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <a href="tel:+917202841385" class="contact-item">
+                                <div class="item-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="item-info">
+                                    <span class="item-label">Phone</span>
+                                    <span class="item-value">+91 72028 41385</span>
+                                </div>
+                            </a>
+
+                            <div class="contact-item">
+                                <div class="item-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="item-info">
+                                    <span class="item-label">Location</span>
+                                    <span class="item-value">Gujarat, India</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-socials-box">
+                            <span class="socials-box-title">Social Profiles:</span>
+                            <div class="social-pills">
+                                <a href="https://www.linkedin.com/in/valand-deep-01b44a396" target="_blank"
+                                    rel="noopener noreferrer" class="social-pill-link">
+                                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="https://github.com/deepo1229" target="_blank" rel="noopener noreferrer"
+                                    class="social-pill-link">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                                <a href="https://www.instagram.com/_valand_deep_2406?igsh=MTJ5bGFlYXE3dmQ0aA=="
+                                    target="_blank" rel="noopener noreferrer" class="social-pill-link">
+                                    <i class="fa-brands fa-instagram"></i> Instagram
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-panel glass-panel">
+                        <form id="contact-form" novalidate>
+                            <!-- Web3Forms Access Key -->
+                            <input type="hidden" name="access_key" id="access_key"
+                                value="7b6451e1-526f-44e6-83f1-e6838f727ff6">
+                            <input type="hidden" name="subject" value="New Portfolio Contact from Valand Deep Website">
+                            <!-- Anti-spam honeypot -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                            <div class="form-group">
+                                <label for="name">Your Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required placeholder="e.g. John Doe"
+                                    autocomplete="name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Your Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="e.g. john@example.com"
+                                    autocomplete="email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="5" required
+                                    placeholder="Write your message or inquiry here..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                                <span><i class="fa-regular fa-paper-plane"></i> Send Message</span>
+                            </button>
+
+                            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="logo-accent">&lt;</span>VALAND DEEP<span class="logo-accent">/&gt;</span>
+                    <p>IT Engineering Student, Developer, and Co-Founder of Lampitex Digital Solutions.</p>
+                </div>
+                <ul class="footer-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#achievements">Milestones</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Valand Deep. All Rights Reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/valand-deep-01b44a396" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/deepo1229" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/_valand_deep_2406?igsh=MTJ5bGFlYXE3dmQ0aA==" target="_blank"
+                        rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- Three.js Library from CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Portfolio Main Script -->
     <script src="main.js"></script>
 </body>
 
